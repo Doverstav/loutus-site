@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1 class="text">He's a developer 🤓</h1>
+    <h1 class="text">He's a developer 🤖</h1>
   </div>
 </template>
 
