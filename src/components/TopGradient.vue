@@ -19,9 +19,6 @@ export default {
   width: 100%;
   background-image: linear-gradient(170deg, white 50%, rgba(0,0,0,0) 50%);
 
-  animation-name: leftIn;
-  animation-duration: 1s;
-
   z-index: 1;
 }
 
@@ -31,30 +28,5 @@ export default {
   left: 2em;
 
   max-width: 100%;
-
-  /*opacity: 0;
-
-  animation-delay: 1s;
-  animation-name: fadeIn;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;*/
-}
-
-@keyframes leftIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 </style>
