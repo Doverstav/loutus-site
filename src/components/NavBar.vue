@@ -33,7 +33,7 @@ export default {
 
 .nav-container {
   height: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
 
   display: grid;
