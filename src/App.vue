@@ -29,7 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: lightgray;
+  background-color: #EAEAEA;
   min-height: 100vh;
 
   overflow-x: hidden;

@@ -1,6 +1,6 @@
 <template>
   <div class="top-gradient">
-    <img class="top-gradient-text" src="../assets/loutus_logo.svg" />
+    <img class="loutus-logo" src="../assets/loutus_logo.svg" />
   </div>
 </template>
 
@@ -25,10 +25,12 @@ export default {
   z-index: 1;
 }
 
-.top-gradient-text {
+.loutus-logo {
   position: absolute;
   top: 25%;
   left: 2em;
+
+  max-width: 100%;
 
   /*opacity: 0;
 
