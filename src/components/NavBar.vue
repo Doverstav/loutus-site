@@ -47,7 +47,7 @@ export default {
 
 .logo-small {
   height: 50%;
-  margin-left: 16px;
+  margin-left: 32px;
   align-self: center;
 }
 
