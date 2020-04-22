@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .double-gradient {
-  height: 50vh;
+  height: 90vh;
   position: relative;
 }
 </style>
