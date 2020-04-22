@@ -62,5 +62,6 @@ export default {
 
 .nav-link:hover {
   border-bottom: 4px solid #86c7c4;
+  cursor: pointer;
 }
 </style>
