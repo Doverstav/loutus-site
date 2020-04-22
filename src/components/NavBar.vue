@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
 
-    <img class="logo-small" src="../assets/logo_small.png" />
+    <img class="logo-small" src="../assets/loutus_logo_small.svg" />
 
     <div class="nav-grid-container">
       <span class="nav-link">HOME</span>
@@ -23,7 +23,7 @@ export default {
   height: 10vh;
   width: 100%;
   background-color: white;
-  box-shadow: 0 5px 10px lightgray;
+  box-shadow: 0 5px 10px #EAEAEA;
 
   display: grid;
   grid-template-columns: auto auto;
@@ -39,12 +39,21 @@ export default {
 }
 
 .logo-small {
-  height: 75%;
-  margin: 8px;
+  height: 50%;
+  margin-left: 16px;
+  align-self: center;
 }
 
 .nav-link {
-  font-family: 'Maven Pro', sans-serif;
   align-self: center;
+  justify-self: center;
+
+  border-bottom: 4px solid rgba(0,0,0,0);
+
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid #86C7C4;
 }
 </style>
