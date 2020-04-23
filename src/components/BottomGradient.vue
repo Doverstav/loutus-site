@@ -1,6 +1,8 @@
 <template>
   <div class="bottom-gradient">
-    <img class="cool-keyboard" src="../assets/keyboard.png" />
+    <div class="bottom-gradient-container">
+      <img class="cool-keyboard" src="../assets/keyboard.png" />
+    </div>
   </div>
 </template>
 
@@ -18,6 +20,13 @@ export default {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(170deg, rgba(0, 0, 0, 0) 50%, #eaeaea 50%);
+}
+
+.bottom-gradient-container {
+  position: relative;
+  height: 100%;
+  max-width: 2000px;
+  margin: auto;
 }
 
 .cool-keyboard {

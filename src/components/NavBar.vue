@@ -33,7 +33,7 @@ export default {
 
 .nav-container {
   height: 100%;
-  max-width: 1080px;
+  max-width: 1224px;
   margin: auto;
 
   display: grid;
@@ -47,7 +47,7 @@ export default {
 
 .logo-small {
   height: 50%;
-  margin-left: 16px;
+  margin-left: 32px;
   align-self: center;
 }
 
@@ -62,5 +62,6 @@ export default {
 
 .nav-link:hover {
   border-bottom: 4px solid #86c7c4;
+  cursor: pointer;
 }
 </style>
