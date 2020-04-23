@@ -11,7 +11,19 @@
 
 <script>
 export default {
-  name: "TopGradient"
+  name: "TopGradient",
+  data: function() {
+    return {
+      logoPath: "../assets/loutus_logo.svg"
+    };
+  },
+  mounted: function() {
+    // Add current time to path to logo. This should stop 
+    // caching of the SVG-file and ensure that the animation
+    // plays every time the site is reloaded
+    let logo = document.querySelector(".loutus-logo");
+    logo.src = `${logo.src}?${Date.now()}`;
+  }
 };
 </script>
 
