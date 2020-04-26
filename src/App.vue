@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <NavBar/>
-    <DoubleGradient />
+    <MainContent />
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar";
-import DoubleGradient from "./components/DoubleGradientContainer";
+import MainContent from "./components/MainContent";
 
 export default {
   name: "App",
   components: {
     NavBar,
-    DoubleGradient
+    MainContent
   }
 };
 </script>
