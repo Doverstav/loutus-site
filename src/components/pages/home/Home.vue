@@ -10,7 +10,7 @@ import TopGradient from "./TopGradient";
 import BottomGradient from "./BottomGradient"
 
 export default {
-  name: "DoubleGradient",
+  name: "Home",
   components: {
     TopGradient,
     BottomGradient

@@ -1,7 +1,7 @@
 <template>
   <div class="bottom-gradient">
     <div class="bottom-gradient-container">
-      <img class="cool-keyboard" src="../assets/keyboard.png" />
+      <img class="cool-keyboard" src="../../../assets/keyboard.png" />
     </div>
   </div>
 </template>

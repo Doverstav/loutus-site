@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="nav-container">
-      <img class="logo-small" src="../assets/loutus_logo_small.svg" />
+      <img class="logo-small" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
         <NavLink text="HOME" href="/" />

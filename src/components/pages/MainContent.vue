@@ -1,15 +1,15 @@
 <script>
-import DoubleGradient from './DoubleGradientContainer';
-import MeetLoutus from './MeetLoutus';
-import Contact from './Contact';
-import Work from './Work';
+import Home from './home/Home';
+import MeetLoutus from './meetLoutus/MeetLoutus';
+import Contact from './contact/Contact';
+import Work from './work/Work';
 
 export default {
   name: "MainContent",
   data () { return {
     currentRoute: window.location.pathname,
     routes: {
-      '/': DoubleGradient,
+      '/': Home,
       '/meet-loutus': MeetLoutus,
       '/work': Work,
       '/contact': Contact
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     ViewComponent () {
-      return this.routes[this.currentRoute] || DoubleGradient;
+      return this.routes[this.currentRoute] || Home;
     }
   },
   render (h) {

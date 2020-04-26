@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar";
-import MainContent from "./components/MainContent";
+import NavBar from "./components/nav/NavBar";
+import MainContent from "./components/pages/MainContent";
 
 export default {
   name: "App",

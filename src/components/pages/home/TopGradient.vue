@@ -1,7 +1,7 @@
 <template>
   <div class="top-gradient">
     <div class="top-gradient-container">
-      <img class="loutus-logo" src="../assets/loutus_logo.svg" />
+      <img class="loutus-logo" src="../../../assets/loutus_logo.svg" />
       <p
         class="top-gradient-text"
       >We create digital products that are totally awesome. We create digital products that are totally awesome. We create digital products that are totally awesome.</p>
