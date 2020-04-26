@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <!-- 
+      TODO: Create top level div that handles sizing of navbar and main content
+      insteadof each component handling it separately
+    -->
     <NavBar/>
     <MainContent />
   </div>
