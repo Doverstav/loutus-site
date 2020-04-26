@@ -1,21 +1,26 @@
 <template>
   <div class="nav">
     <div class="nav-container">
-      <img class="logo-small" src="../assets/loutus_logo_small.svg" />
+      <img class="logo-small" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
-        <span class="nav-link">HOME</span>
-        <span class="nav-link">MEET LOUTUS</span>
-        <span class="nav-link">WORK</span>
-        <span class="nav-link">CONTACT</span>
+        <NavLink text="HOME" href="/" />
+        <NavLink text="MEET LOUTUS" href="/meet-loutus" />
+        <NavLink text="WORK" href="/work" />
+        <NavLink text="CONTACT" href="/contact" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import NavLink from "./NavLink";
+
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  components: {
+    NavLink
+  }
 };
 </script>
 
@@ -49,19 +54,5 @@ export default {
   height: 50%;
   margin-left: 32px;
   align-self: center;
-}
-
-.nav-link {
-  align-self: center;
-  justify-self: center;
-
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
-
-  font-family: "Maven Pro", sans-serif;
-}
-
-.nav-link:hover {
-  border-bottom: 4px solid #86c7c4;
-  cursor: pointer;
 }
 </style>

@@ -1,19 +1,23 @@
 <template>
   <div id="app">
+    <!-- 
+      TODO: Create top level div that handles sizing of navbar and main content
+      insteadof each component handling it separately
+    -->
     <NavBar/>
-    <DoubleGradient />
+    <MainContent />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar";
-import DoubleGradient from "./components/DoubleGradientContainer";
+import NavBar from "./components/nav/NavBar";
+import MainContent from "./components/pages/MainContent";
 
 export default {
   name: "App",
   components: {
     NavBar,
-    DoubleGradient
+    MainContent
   }
 };
 </script>
