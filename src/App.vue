@@ -36,6 +36,8 @@ body {
   background-color: #EAEAEA;
   min-height: 100vh;
 
-  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 10% 90%;
+
 }
 </style>

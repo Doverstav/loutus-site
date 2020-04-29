@@ -26,14 +26,13 @@ export default {
 
 <style scoped>
 .nav {
-  height: 10vh;
   width: 100%;
   background-color: white;
   box-shadow: 0 5px 10px #eaeaea;
 
   /* Ensure that navbar is above content and box-shadow is visible */
   position: relative;
-  z-index: 2;
+  z-index: 100;
 }
 
 .nav-container {
