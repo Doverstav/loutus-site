@@ -24,7 +24,7 @@ export default {
     louData: function() {
       return {
         profile: require(`../../../assets/profile_lou.png`),
-        profileText: "She's a designer",
+        profileText: "She's a designer.",
         emoji: "🦖",
         text:
           "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct."
@@ -33,7 +33,7 @@ export default {
     tusData: function() {
       return {
         profile: require(`../../../assets/profile_tus.png`),
-        profileText: "He's a developer",
+        profileText: "He's a developer.",
         emoji: "🤖",
         text:
           "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there."
