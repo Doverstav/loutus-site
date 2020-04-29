@@ -4,7 +4,7 @@
       <div class="meet-loutus-box">
         <p>Here is some text!</p>
       </div>
-      <div class="meet-loutus-box">
+      <div class="meet-loutus-box profiles">
         <Profile :image="louData.profile" :imageText="louData.profileText" :emoji="louData.emoji" :text="louData.text" />
         <Profile :image="tusData.profile" :imageText="tusData.profileText" :emoji="tusData.emoji" :text="tusData.text" />
       </div>
@@ -59,5 +59,10 @@ export default {
 
 .meet-loutus-box {
   height: 100%;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 </style>
