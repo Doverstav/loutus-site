@@ -52,7 +52,7 @@ export default {
   top: 25%;
   float: left;
 
-  max-width: 100%;
+  max-width: calc(100% - 32px);
 }
 
 .top-gradient-text {
