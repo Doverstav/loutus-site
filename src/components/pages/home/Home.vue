@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .double-gradient {
-  height: 90vh;
-  position: relative;
+  /* Needed because child elements use absolute positioning. */
+  position: relative; 
 }
 </style>

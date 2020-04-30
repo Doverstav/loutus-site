@@ -17,8 +17,6 @@ export default {
   }},
   beforeMount () {
     window.addEventListener('popstate', () => {
-      console.log("new state!");
-      console.log(window.location.pathname)
       this.currentRoute = window.location.pathname;
     })
   },
