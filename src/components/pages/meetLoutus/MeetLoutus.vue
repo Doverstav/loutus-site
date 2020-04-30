@@ -1,8 +1,13 @@
 <template>
   <div class="meet-loutus">
     <div class="meet-loutus-container">
-      <div class="meet-loutus-box">
-        <p>Here is some text!</p>
+      <div class="meet-loutus-box profile-texts">
+        <div class="profile-text-container">
+          <h1 class="profile-text profile-text-first">Hi there</h1>
+          <h1 class="profile-text profile-text-second">We're</h1>
+          <img class="profile-text-logo" src="../../../assets/loutus_logo_no_text.svg" />
+          <p class="profile-text-description">We create design and blip-blop. This is what we do. If you ask us what we do - that would be our answer.</p>
+        </div>
       </div>
       <div class="meet-loutus-box profiles">
         <Profile
@@ -47,7 +52,7 @@ export default {
   },
   components: {
     Profile
-  },
+  }
 };
 </script>
 
@@ -72,5 +77,52 @@ export default {
 .profiles {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+.profile-texts {
+  position: relative;
+}
+
+.profile-text-container {
+  position: absolute;
+  top: 25%;
+  left: 32px;
+
+  text-align: left;
+}
+
+.profile-text {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.profile-text-first {
+  position: relative;
+  left: 7%;
+
+  font-size: 25px;
+}
+
+.profile-text-second {
+  position: relative;
+  left: 15%;
+
+  font-size: 45px;
+  color: #86c7c4;
+}
+
+.profile-text-logo {
+  max-width: calc(100% - 32px);
+}
+
+.profile-text-description {
+  max-width: 50%;
+  margin-top: 64px;
+
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
+    monospace;
 }
 </style>
