@@ -56,13 +56,12 @@ export default {
 }
 
 .profile-picture-text {
-  font-size: 14px;
+  font-size: 1.2em;
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
 }
 
 .profile-bio-text {
-  font-size: 12px;
   font-family: "Maven Pro", sans-serif;
 }
 </style>
