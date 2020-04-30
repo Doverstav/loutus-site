@@ -1,9 +1,5 @@
 <template>
-  <span
-    class="nav-link"
-    v-bind:class="{active: isActive}"
-    v-on:click="go"
-  >{{text}}</span>
+  <span class="nav-link" v-bind:class="{active: isActive}" v-on:click="go">{{text}}</span>
 </template>
 
 <script>
@@ -11,29 +7,29 @@ export default {
   name: "NavLink",
   props: {
     text: String,
-    href: String,
+    href: String
   },
-  data () { return {
-    isActive: false,
-  }},
-  beforeMount () {
+  data() {
+    return {
+      isActive: false
+    };
+  },
+  beforeMount() {
     this.isActive = this.href === window.location.pathname;
-    window.addEventListener('popstate', () => {
+    window.addEventListener("popstate", () => {
       this.isActive = this.href === window.location.pathname;
-    })
+    });
   },
   methods: {
     go() {
-      window.history.pushState(
-        null,
-        "",
-        this.href
-      );
-      // Make sure that things update
-      dispatchEvent(new PopStateEvent('popstate'));
+      if (window.location.pathname !== this.href) {
+        window.history.pushState(null, "", this.href);
+        // Make sure that things update
+        dispatchEvent(new PopStateEvent("popstate"));
+      }
     }
   }
-}
+};
 </script>
 
 <style scoped>

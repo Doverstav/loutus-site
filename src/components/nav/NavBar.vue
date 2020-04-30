@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="nav-container">
-      <img class="logo-small" src="../../assets/loutus_logo_small.svg" />
+      <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
         <NavLink text="HOME" href="/" />
@@ -20,6 +20,16 @@ export default {
   name: "NavBar",
   components: {
     NavLink
+  },
+  methods: {
+    goHome() {
+      // Only push new state if we are trying to leave current state
+      if (window.location.pathname !== "/") {
+        window.history.pushState(null, "", "/");
+        // Make sure that things update
+        dispatchEvent(new PopStateEvent("popstate"));
+      }
+    }
   }
 };
 </script>
@@ -53,5 +63,9 @@ export default {
   height: 50%;
   margin-left: 32px;
   align-self: center;
+}
+
+.logo-small:hover {
+  cursor: pointer;
 }
 </style>
