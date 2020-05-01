@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 10vh auto;
 
 }
 </style>

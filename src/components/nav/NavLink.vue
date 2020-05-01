@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     go() {
+      // Only push new state if we are trying to leave current state
       if (window.location.pathname !== this.href) {
         window.history.pushState(null, "", this.href);
         // Make sure that things update

@@ -1,61 +1,123 @@
 <svg width="431" height="111" viewBox="0 0 431 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
-  .svg-l {
+  /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.svg-l {
     opacity: 0;
-    animation-name: slideInLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: slideInLeft;
+            animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 
   .svg-t {
     opacity: 0;
-    animation-name: slideInRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 
   .svg-text {
     opacity: 0;
-    animation-name: slideInUp;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: slideInUp;
+            animation-name: slideInUp;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 
-  @keyframes slideInUp {
+  @-webkit-keyframes slideInUp {
     from {
-      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
     }
     50% {
       opacity: 0;
     }
     to {
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slideInLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
       opacity: 1;
     }
   }
 
   @keyframes slideInLeft {
     from {
-      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
     }
     50% {
       opacity: 0;
     }
     to {
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slideInRight {
+    from {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
       opacity: 1;
     }
   }
 
   @keyframes slideInRight {
     from {
-      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
     }
     50% {
       opacity: 0;
     }
     to {
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
       opacity: 1;
     }
   }
