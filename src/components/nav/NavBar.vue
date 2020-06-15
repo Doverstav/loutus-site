@@ -7,7 +7,6 @@
         <NavLink text="HOME" href="/" />
         <NavLink text="MEET LOUTUS" href="/meet-loutus" />
         <NavLink text="WORK" href="/work" />
-        <NavLink text="CONTACT" href="/contact" />
       </div>
     </div>
   </div>
