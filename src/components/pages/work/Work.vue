@@ -8,6 +8,8 @@
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   </div>
@@ -44,5 +46,6 @@ export default {
 
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 32px;
+  row-gap: 32px;
 }
 </style>
