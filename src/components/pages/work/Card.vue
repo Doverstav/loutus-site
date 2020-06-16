@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <img class="card-image" :src="`https://picsum.photos/500/500?random=random${random}`" />
+      <img class="card-image" :src="`https://picsum.photos/500/300?random=random${random}`" />
     </div>
     <div class="card-body">
       <h2 class="card-header">WEBSITE</h2>
