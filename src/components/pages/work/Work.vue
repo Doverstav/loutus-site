@@ -1,8 +1,9 @@
 <template>
   <div class="work">
     <div class="work-container">
-      <div>
-        <h1>Products</h1>
+      <div class="work-header-container">
+        <h1 class="work-heading-large">Products</h1>
+        <h2 class="work-heading-small">We've created</h2>
       </div>
       <div class="product-card-grid">
         <Card />
@@ -38,6 +39,32 @@ export default {
   max-width: 1224px;
   margin: auto;
   padding: 32px;
+}
+
+.work-header-container {
+  margin-top: 12%;
+  margin-bottom: 6%;
+
+  text-align: start;
+
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.work-heading-large {
+  font-size: 45px;
+  color: #86c7c4;
+
+  margin: 0;
+}
+
+.work-heading-small {
+  font-size: 25px;
+  color: #333333;
+
+  margin: 0;
+  margin-left: 100px;
 }
 
 .product-card-grid {
