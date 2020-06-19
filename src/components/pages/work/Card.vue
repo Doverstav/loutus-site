@@ -4,9 +4,9 @@
       <img class="card-image" :src="`https://picsum.photos/500/300?random=random${random}`" />
     </div>
     <div class="card-body">
-      <h2 class="card-header">WEBSITE</h2>
-      <p class="card-text">Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.</p>
-      <a class="card-link" href="google.com">MORE PLZ ></a>
+      <h2 class="text card-header">WEBSITE</h2>
+      <p class="text card-text">Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.</p>
+      <a class="text card-link" href="google.com">MORE PLZ ></a>
     </div>
   </div>
 </template>
@@ -50,5 +50,21 @@ export default {
 .card-body {
   text-align: start;
   margin: 16px;
+}
+
+.text {
+  font-family: "Maven Pro", sans-serif;
+}
+
+.card-header {
+  font-size: 20px;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+.card-link {
+  font-size: 12px;
 }
 </style>
