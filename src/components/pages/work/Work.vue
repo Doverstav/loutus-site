@@ -48,12 +48,12 @@ export default {
   text-align: start;
 
   font-family: "Maven Pro", sans-serif;
-  font-weight: 600;
   text-transform: uppercase;
 }
 
 .work-heading-large {
-  font-size: 45px;
+  font-size: 60px;
+  font-weight: 600;
   color: #86c7c4;
 
   margin: 0;
@@ -61,6 +61,7 @@ export default {
 
 .work-heading-small {
   font-size: 25px;
+  font-weight: 600;
   color: #333333;
 
   margin: 0;
