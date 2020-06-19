@@ -16,6 +16,7 @@
           :emoji="louData.emoji"
           :text="louData.text"
           :email="louData.email"
+          :accentColor="louData.accentColor"
         />
         <Profile
           :image="tusData.profile"
@@ -23,6 +24,7 @@
           :emoji="tusData.emoji"
           :text="tusData.text"
           :email="tusData.email"
+          :accentColor="tusData.accentColor"
         />
       </div>
     </div>
@@ -42,7 +44,8 @@ export default {
         emoji: "🦖",
         text:
           "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct.",
-        email: "lou@loutus.com"
+        email: "lou@loutus.com",
+        accentColor: "#97CC2B"
       },
       tusData: {
         profile: `https://picsum.photos/300/300?random=random${Math.floor(Math.random()*100)}`,
@@ -50,7 +53,8 @@ export default {
         emoji: "🤖",
         text:
           "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there.",
-        email: "tus@loutus.com"
+        email: "tus@loutus.com",
+        accentColor: "#86c7c4"
       }
     };
   },

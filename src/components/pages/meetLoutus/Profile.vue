@@ -3,16 +3,16 @@
     <div class="profile-inner-container">
       <div class="profile-picture-container">
         <img class="profile-picture" :src="image" />
-        <p class="profile-emoji">{{emoji}}</p>
+        <span class="profile-emoji">{{emoji}}</span>
       </div>
       <div class="profile-text-container">
         <div class="profile-text-section">
-          <p class="profile-picture-text">{{imageText}}</p>
+          <p class="profile-picture-text" :style="textAccent">{{imageText}}</p>
           <p class="profile-bio-text">{{text}}</p>
         </div>
         <div class="profile-email-section">
-          <p class="profile-email-header">Contact</p>
-          <p class="profile-email-address">{{email}}</p>
+          <p class="profile-email-header" :style="textAccent">Contact</p>
+          <a class="profile-email-address" :href="`mailto:${email}`">{{email}}</a>
         </div>
       </div>
     </div>
@@ -26,7 +26,13 @@ export default {
     imageText: String,
     emoji: String,
     text: String,
-    email: String
+    email: String,
+    accentColor: String
+  },
+  computed: {
+    textAccent () {
+      return `color: ${this.accentColor};`;
+    }
   }
 };
 </script>
@@ -48,8 +54,20 @@ export default {
   grid-template-rows: auto 1fr;
 }
 
+.profile-picture-container {
+  position: relative;
+}
+
 .profile-picture {
   width: 100%;
+}
+
+.profile-emoji {
+  font-size: 2em;
+
+  position: absolute;
+  right: 8px;
+  bottom: -4px;
 }
 
 .profile-text-container {
@@ -66,6 +84,8 @@ export default {
   font-size: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
+
+  margin-top: 0;
 }
 
 .profile-bio-text {
@@ -75,11 +95,19 @@ export default {
 .profile-email-header {
   font-size: 0.8em;
   text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .profile-email-address {
+  margin-top: 4px;
+  margin-bottom: 0px;
+
   font-size: 0.8em;
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
+}
+
+.profile-email-address:link {
+  color: #333333;
 }
 </style>
