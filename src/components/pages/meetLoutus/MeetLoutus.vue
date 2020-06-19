@@ -15,12 +15,14 @@
           :imageText="louData.profileText"
           :emoji="louData.emoji"
           :text="louData.text"
+          :email="louData.email"
         />
         <Profile
           :image="tusData.profile"
           :imageText="tusData.profileText"
           :emoji="tusData.emoji"
           :text="tusData.text"
+          :email="tusData.email"
         />
       </div>
     </div>
@@ -35,18 +37,20 @@ export default {
   data() {
     return {
       louData: {
-        profile: require(`../../../assets/profile_lou.png`),
+        profile: `https://picsum.photos/300/300?random=random${Math.floor(Math.random()*100)}`,
         profileText: "She's a designer.",
         emoji: "🦖",
         text:
-          "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct."
+          "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct.",
+        email: "lou@loutus.com"
       },
       tusData: {
-        profile: require(`../../../assets/profile_tus.png`),
+        profile: `https://picsum.photos/300/300?random=random${Math.floor(Math.random()*100)}`,
         profileText: "He's a developer.",
         emoji: "🤖",
         text:
-          "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there."
+          "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there.",
+        email: "tus@loutus.com"
       }
     };
   },
@@ -63,7 +67,7 @@ export default {
 
 .meet-loutus-container {
   box-sizing: border-box;
-  
+
   height: 100%;
   max-width: 1224px;
 
@@ -78,15 +82,15 @@ export default {
 .profiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
+  column-gap: 32px;
 
-  margin-top: 50%;
+  margin-top: 25%;
 
   height: fit-content;
 }
 
 .profile-text-container {
-  margin-top: 50%;
+  margin-top: 25%;
   text-align: left;
 }
 
