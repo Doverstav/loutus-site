@@ -8,8 +8,8 @@
       <div class="profile-text-container">
         <p class="profile-picture-text">{{imageText}}</p>
         <p class="profile-bio-text">{{text}}</p>
-        <p>Contact</p>
-        <p>{{email}}</p>
+        <p class="profile-email-header">Contact</p>
+        <p class="profile-email-address">{{email}}</p>
       </div>
     </div>
   </div>
@@ -42,17 +42,30 @@ export default {
 }
 
 .profile-text-container {
+  font-family: "Maven Pro", sans-serif;
+
   text-align: start;
   margin: 16px;
 }
 
 .profile-picture-text {
   font-size: 1.2em;
-  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
-    monospace;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .profile-bio-text {
-  font-family: "Maven Pro", sans-serif;
+  font-size: 1em;
+}
+
+.profile-email-header {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.profile-email-address {
+  font-size: 0.8em;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
+    monospace;
 }
 </style>
