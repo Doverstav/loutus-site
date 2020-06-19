@@ -62,32 +62,31 @@ export default {
 }
 
 .meet-loutus-container {
+  box-sizing: border-box;
+  
   height: 100%;
   max-width: 1224px;
+
   margin: auto;
+  padding-right: 32px;
+  padding-left: 32px;
 
   display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.meet-loutus-box {
-  height: 100%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .profiles {
   display: grid;
-  grid-template-columns: 50% 50%;
-}
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
 
-.profile-texts {
-  position: relative;
+  margin-top: 50%;
+
+  height: fit-content;
 }
 
 .profile-text-container {
-  position: absolute;
-  top: 25%;
-  left: 32px;
-
+  margin-top: 50%;
   text-align: left;
 }
 
