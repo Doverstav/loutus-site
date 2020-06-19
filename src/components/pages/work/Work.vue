@@ -38,7 +38,8 @@ export default {
   height: 100%;
   max-width: 1224px;
   margin: auto;
-  padding: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .work-header-container {
