@@ -6,10 +6,14 @@
         <p class="profile-emoji">{{emoji}}</p>
       </div>
       <div class="profile-text-container">
-        <p class="profile-picture-text">{{imageText}}</p>
-        <p class="profile-bio-text">{{text}}</p>
-        <p class="profile-email-header">Contact</p>
-        <p class="profile-email-address">{{email}}</p>
+        <div class="profile-text-section">
+          <p class="profile-picture-text">{{imageText}}</p>
+          <p class="profile-bio-text">{{text}}</p>
+        </div>
+        <div class="profile-email-section">
+          <p class="profile-email-header">Contact</p>
+          <p class="profile-email-address">{{email}}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -37,6 +41,13 @@ export default {
   overflow: hidden; /* Ensure that images get rounded corners */
 }
 
+.profile-inner-container {
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 .profile-picture {
   width: 100%;
 }
@@ -46,6 +57,9 @@ export default {
 
   text-align: start;
   margin: 16px;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 .profile-picture-text {
