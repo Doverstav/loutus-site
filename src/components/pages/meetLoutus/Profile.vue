@@ -5,8 +5,12 @@
         <img class="profile-picture" :src="image" />
         <p class="profile-emoji">{{emoji}}</p>
       </div>
-      <p class="profile-picture-text">{{imageText}}</p>
-      <p class="profile-bio-text">{{text}}</p>
+      <div class="profile-text-container">
+        <p class="profile-picture-text">{{imageText}}</p>
+        <p class="profile-bio-text">{{text}}</p>
+        <p>Contact</p>
+        <p>{{email}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -17,42 +21,29 @@ export default {
     image: String,
     imageText: String,
     emoji: String,
-    text: String
+    text: String,
+    email: String
   }
 };
 </script>
 
 <style scoped>
 .profile-container {
-  position: relative;
-  text-align: left;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 16px 24px rgba(0, 29, 63, 0.14);
 
-  margin-left: 32px;
-  margin-right: 32px;
-}
-
-.profile-inner-container {
-  position: absolute;
-  left: 0;
-  top: 35%;
-}
-
-.profile-picture-container {
-  position: relative;
-}
-
-.profile-emoji {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  font-size: 3em;
-  margin: 0;
+  overflow: hidden; /* Ensure that images get rounded corners */
 }
 
 .profile-picture {
-  width: 75%;
-  display: block;
+  width: 100%;
+}
+
+.profile-text-container {
+  text-align: start;
+  margin: 16px;
 }
 
 .profile-picture-text {
