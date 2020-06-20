@@ -4,17 +4,17 @@
       <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
-        <NavLink text="HOME" href="/" />
-        <NavLink text="MEET LOUTUS" href="/meet-loutus" />
-        <NavLink text="WORK" href="/work" />
+        <NavLink class=".nav-link" text="HOME" href="/" />
+        <NavLink class=".nav-link" text="MEET LOUTUS" href="/meet-loutus" />
+        <NavLink class=".nav-link" text="WORK" href="/work" />
       </div>
       <div class="mobile-nav-container">
-        <span @click="togglePanel()">@</span>
+        <img src="../../assets/icons/menu.svg" @click="togglePanel()">
         <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
           <div>
-            <span @click="togglePanel()">@</span>
+            <img src="../../assets/icons/x.svg" @click="togglePanel()">
           </div>
-          <div>
+          <div class="mobile-nav-grid">
             <NavLink text="HOME" href="/" />
             <NavLink text="MEET LOUTUS" href="/meet-loutus" />
             <NavLink text="WORK" href="/work" />
@@ -76,6 +76,7 @@ export default {
 
   display: grid;
   grid-template-columns: auto auto;
+  align-items: center;
 }
 
 .nav-grid-container {
@@ -83,8 +84,29 @@ export default {
   grid-template-columns: auto auto auto;
 }
 
+.nav-link {
+  flex: 1 1 auto;
+}
+
 .mobile-nav-container {
+  justify-self: end;
   display: none;
+}
+
+.mobile-nav-grid {
+  box-sizing: border-box;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.mobile-nav-grid > * {
+  font-size: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .mobile-nav-panel {
@@ -108,7 +130,6 @@ export default {
 
 .logo-small {
   height: 50%;
-  align-self: center;
 }
 
 .logo-small:hover {
