@@ -142,7 +142,7 @@ export default {
 }
 
 .profile-text-logo {
-  max-width: calc(100% - 32px);
+  max-width: 100%;
 }
 
 .profile-text-description {
