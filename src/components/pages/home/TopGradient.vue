@@ -1,7 +1,7 @@
 <template>
   <div class="top-gradient">
     <div class="top-gradient-container">
-      <img class="loutus-logo" src="../../../assets/loutus_logo.svg" />
+      <img class="loutus-logo" :src="logoPath" />
       <p
         class="top-gradient-text"
       >We create digital products that are totally awesome. We create digital products that are totally awesome. We create digital products that are totally awesome.</p>
@@ -14,7 +14,7 @@ export default {
   name: "TopGradient",
   data: function() {
     return {
-      logoPath: "../assets/loutus_logo.svg"
+      logoPath: require("../../../assets/loutus_logo.svg")
     };
   },
   mounted: function() {
@@ -40,26 +40,29 @@ export default {
 }
 
 .top-gradient-container {
+  box-sizing: border-box;
+
   height: 100%;
   max-width: 1224px;
+
   margin: auto;
-  position: relative;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .loutus-logo {
-  position: absolute;
-  left: 32px;
-  top: 25%;
-  float: left;
+  margin-top: 12%;
 
-  max-width: calc(100% - 32px);
+  max-width: 100%;
 }
 
 .top-gradient-text {
-  position: absolute;
-  bottom: 10%;
-  left: 2em;
-
+  margin-top: 32px;
   max-width: 350px;
   text-align: start;
 
