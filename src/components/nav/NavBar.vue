@@ -3,10 +3,23 @@
     <div class="nav-container">
       <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
 
-      <div class="nav-grid-container">
+      <div v-if="!isMobile" class="nav-grid-container">
         <NavLink text="HOME" href="/" />
         <NavLink text="MEET LOUTUS" href="/meet-loutus" />
         <NavLink text="WORK" href="/work" />
+      </div>
+      <div v-else class="mobile-nav-container">
+        <span @click="togglePanel()">@</span>
+        <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
+          <div>
+            <span @click="togglePanel()">@</span>
+          </div>
+          <div>
+            <NavLink text="HOME" href="/" />
+            <NavLink text="MEET LOUTUS" href="/meet-loutus" />
+            <NavLink text="WORK" href="/work" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -17,8 +30,18 @@ import NavLink from "./NavLink";
 
 export default {
   name: "NavBar",
+  data: function() {
+    return {
+      showPanel: false
+    };
+  },
   components: {
     NavLink
+  },
+  computed: {
+    isMobile() {
+      return window.matchMedia("(max-width: 540px").matches;
+    }
   },
   methods: {
     goHome() {
@@ -28,6 +51,9 @@ export default {
         // Make sure that things update
         dispatchEvent(new PopStateEvent("popstate"));
       }
+    },
+    togglePanel() {
+      this.showPanel = !this.showPanel;
     }
   }
 };
@@ -60,6 +86,25 @@ export default {
 .nav-grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+.mobile-nav-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  height: 100vh;
+  width: 0;
+
+  overflow-x: hidden;
+  transition: 0.5s; /* .5s animation when changing width */
+
+  background-color: white;
+  box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
+}
+
+.display-panel {
+  width: 90vw;
 }
 
 .logo-small {
