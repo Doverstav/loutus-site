@@ -95,7 +95,7 @@ export default {
 .profile-email-header {
   font-size: 0.8em;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .profile-email-address {
