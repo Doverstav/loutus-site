@@ -92,6 +92,7 @@ export default {
 .mobile-nav-grid {
   box-sizing: border-box;
   padding: 32px;
+  padding-top: 128px;
 
   display: flex;
   flex-direction: column;
