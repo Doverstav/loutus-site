@@ -40,6 +40,7 @@ export default {
   margin: auto;
   padding-right: 32px;
   padding-left: 32px;
+  padding-bottom: 32px;
 }
 
 .work-header-container {
@@ -76,5 +77,19 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 32px;
   row-gap: 32px;
+}
+
+/* On medium screen, display two products per row */
+@media screen and (max-width: 960px) {
+  .product-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* On small screen, display one products per row */
+@media screen and (max-width: 540px) {
+  .product-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
