@@ -78,19 +78,41 @@ export default {
   margin: auto;
   padding-right: 32px;
   padding-left: 32px;
+  padding-bottom: 32px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+/* 
+  For medium screens, display profiles content in two rows
+  Introductory text in top row, and profiles side by side in second row
+ */
+@media screen and (max-width: 960px) {
+  .meet-loutus-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .profiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
+  row-gap: 32px;
 
   margin-top: 25%;
 
   height: fit-content;
+}
+
+/*
+  For small screens, display in three rows. Text first, then profiles
+  in separate rows.
+*/
+@media screen and (max-width: 540px) {
+  .profiles {
+    grid-template-columns: 1fr;
+  }
 }
 
 .profile-text-container {
@@ -107,15 +129,13 @@ export default {
 }
 
 .profile-text-first {
-  position: relative;
-  left: 7%;
+  margin-left: 7%;
 
   font-size: 25px;
 }
 
 .profile-text-second {
-  position: relative;
-  left: 15%;
+  margin-left: 15%;
 
   font-size: 45px;
   color: #86c7c4;
