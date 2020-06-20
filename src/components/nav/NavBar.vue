@@ -45,9 +45,13 @@ export default {
 }
 
 .nav-container {
+  box-sizing: border-box;
   height: 100%;
+
   max-width: 1224px;
   margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 
   display: grid;
   grid-template-columns: auto auto;
@@ -55,12 +59,11 @@ export default {
 
 .nav-grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .logo-small {
   height: 50%;
-  margin-left: 32px;
   align-self: center;
 }
 
