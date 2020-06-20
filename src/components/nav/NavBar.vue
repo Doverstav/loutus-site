@@ -3,12 +3,12 @@
     <div class="nav-container">
       <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
 
-      <div v-if="!isMobile" class="nav-grid-container">
+      <div class="nav-grid-container">
         <NavLink text="HOME" href="/" />
         <NavLink text="MEET LOUTUS" href="/meet-loutus" />
         <NavLink text="WORK" href="/work" />
       </div>
-      <div v-else class="mobile-nav-container">
+      <div class="mobile-nav-container">
         <span @click="togglePanel()">@</span>
         <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
           <div>
@@ -37,11 +37,6 @@ export default {
   },
   components: {
     NavLink
-  },
-  computed: {
-    isMobile() {
-      return window.matchMedia("(max-width: 540px").matches;
-    }
   },
   methods: {
     goHome() {
@@ -88,6 +83,10 @@ export default {
   grid-template-columns: auto auto auto;
 }
 
+.mobile-nav-container {
+  display: none;
+}
+
 .mobile-nav-panel {
   position: fixed;
   right: 0;
@@ -115,4 +114,16 @@ export default {
 .logo-small:hover {
   cursor: pointer;
 }
+
+/* Decide which nav to display based on screen size */
+@media screen and (max-width: 540px) {
+  .nav-grid-container {
+    display: none;
+  }
+
+  .mobile-nav-container {
+    display: block;
+  }
+}
+
 </style>
