@@ -4,15 +4,15 @@
       <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
-        <NavLink class=".nav-link" text="HOME" href="/" />
-        <NavLink class=".nav-link" text="MEET LOUTUS" href="/meet-loutus" />
-        <NavLink class=".nav-link" text="WORK" href="/work" />
+        <NavLink text="HOME" href="/" />
+        <NavLink text="MEET LOUTUS" href="/meet-loutus" />
+        <NavLink text="WORK" href="/work" />
       </div>
       <div class="mobile-nav-container">
         <img src="../../assets/icons/menu.svg" @click="togglePanel()">
         <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
           <div>
-            <img src="../../assets/icons/x.svg" @click="togglePanel()">
+            <img class="close-nav-button" src="../../assets/icons/x.svg" @click="togglePanel()">
           </div>
           <div class="mobile-nav-grid">
             <NavLink text="HOME" href="/" />
@@ -84,10 +84,6 @@ export default {
   grid-template-columns: auto auto auto;
 }
 
-.nav-link {
-  flex: 1 1 auto;
-}
-
 .mobile-nav-container {
   justify-self: end;
   display: none;
@@ -122,6 +118,12 @@ export default {
 
   background-color: white;
   box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
+}
+
+.close-nav-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
 }
 
 .display-panel {
