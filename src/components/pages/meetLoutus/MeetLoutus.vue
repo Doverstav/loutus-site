@@ -152,4 +152,10 @@ export default {
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
 }
+
+@media screen and (max-width: 540px) {
+  .profile-text-description {
+    max-width: 100%;
+  }
+}
 </style>
