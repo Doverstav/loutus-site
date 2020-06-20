@@ -111,13 +111,14 @@ export default {
   top: 0;
 
   height: 100vh;
-  width: 0;
+  width: 90vw;
+
+  transform: translateX(100%);
 
   overflow-x: hidden;
   transition: 0.5s; /* .5s animation when changing width */
 
   background-color: white;
-  box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
 }
 
 .close-nav-button {
@@ -127,7 +128,8 @@ export default {
 }
 
 .display-panel {
-  width: 90vw;
+  transform: translateX(0);
+  box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
 }
 
 .logo-small {
