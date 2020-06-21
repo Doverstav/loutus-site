@@ -5,7 +5,7 @@
         <div class="profile-text-container">
           <h1 class="profile-text profile-text-first">Hi there</h1>
           <h1 class="profile-text profile-text-second">Nice to meet you</h1>
-          <p class="profile-text-description">We are a dream team delivering stunning UI, UX and web design, responsively and professionaly implemented.</p>
+          <p class="profile-text-description">We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
         </div>
       </div>
       <div class="meet-loutus-box profiles">
