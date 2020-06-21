@@ -41,6 +41,12 @@ export default {
   components: {
     NavLink
   },
+  beforeMount () {
+    window.addEventListener("popstate", () => {
+      // Close navigation panel when navigating away
+      this.showPanel = false;
+    })
+  },
   methods: {
     goHome() {
       // Only push new state if we are trying to leave current state
