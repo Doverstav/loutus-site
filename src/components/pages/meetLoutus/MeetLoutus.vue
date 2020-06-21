@@ -99,7 +99,7 @@ export default {
   column-gap: 32px;
   row-gap: 32px;
 
-  margin-top: 125px;
+  margin-top: 128px;
 
   height: fit-content;
 }
@@ -115,7 +115,7 @@ export default {
 }
 
 .profile-text-container {
-  margin-top: 125px;
+  margin-top: 128px;
   text-align: left;
 }
 
@@ -149,6 +149,14 @@ export default {
 @media screen and (max-width: 540px) {
   .profile-text-description {
     max-width: 100%;
+  }
+  
+  .profiles {
+    margin-top: 64px;
+  }
+
+  .profile-text-container {
+    margin-top: 64px;
   }
 }
 </style>

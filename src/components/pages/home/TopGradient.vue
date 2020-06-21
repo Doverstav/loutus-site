@@ -61,7 +61,7 @@ export default {
 }
 
 .loutus-logo {
-  margin-top: 125px;
+  margin-top: 128px;
 
   max-width: 100%;
 }
@@ -80,5 +80,11 @@ export default {
   text-transform: uppercase;
 
   font-family: "Maven Pro", sans-serif;
+}
+
+@media screen and (max-width: 540px) {
+  .loutus-logo {
+    margin-top: 64px;
+  }
 }
 </style>

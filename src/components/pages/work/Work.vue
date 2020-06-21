@@ -44,8 +44,8 @@ export default {
 }
 
 .work-header-container {
-  margin-top: 125px;
-  margin-bottom: 60px;
+  margin-top: 128px;
+  margin-bottom: 64px;
 
   text-align: start;
 
@@ -90,6 +90,10 @@ export default {
 @media screen and (max-width: 540px) {
   .product-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-header-container {
+    margin-top: 64px;
   }
 }
 </style>
