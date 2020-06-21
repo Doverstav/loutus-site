@@ -56,7 +56,7 @@ export default {
 }
 
 .loutus-logo {
-  margin-top: 12%;
+  margin-top: 125px;
 
   max-width: 100%;
 }

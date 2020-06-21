@@ -44,8 +44,8 @@ export default {
 }
 
 .work-header-container {
-  margin-top: 12%;
-  margin-bottom: 6%;
+  margin-top: 125px;
+  margin-bottom: 60px;
 
   text-align: start;
 

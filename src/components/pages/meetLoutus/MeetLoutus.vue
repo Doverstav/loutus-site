@@ -99,7 +99,7 @@ export default {
   column-gap: 32px;
   row-gap: 32px;
 
-  margin-top: 25%;
+  margin-top: 125px;
 
   height: fit-content;
 }
@@ -115,7 +115,7 @@ export default {
 }
 
 .profile-text-container {
-  margin-top: 25%;
+  margin-top: 125px;
   text-align: left;
 }
 
