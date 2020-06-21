@@ -4,9 +4,8 @@
       <div class="meet-loutus-box profile-texts">
         <div class="profile-text-container">
           <h1 class="profile-text profile-text-first">Hi there</h1>
-          <h1 class="profile-text profile-text-second">We're</h1>
-          <img class="profile-text-logo" src="../../../assets/loutus_logo_no_text.svg" />
-          <p class="profile-text-description">We create design and blip-blop. This is what we do. If you ask us what we do - that would be our answer.</p>
+          <h1 class="profile-text profile-text-second">Nice to meet you</h1>
+          <p class="profile-text-description">We are a dream team delivering stunning UI, UX and web design, responsively and professionaly implemented.</p>
         </div>
       </div>
       <div class="meet-loutus-box profiles">
@@ -129,25 +128,19 @@ export default {
 }
 
 .profile-text-first {
-  margin-left: 7%;
+  font-size: 50px;
+  color: #86c7c4;
+}
+
+.profile-text-second {
+  margin-left: 20%;
 
   font-size: 25px;
 }
 
-.profile-text-second {
-  margin-left: 15%;
-
-  font-size: 45px;
-  color: #86c7c4;
-}
-
-.profile-text-logo {
-  max-width: 100%;
-}
-
 .profile-text-description {
-  max-width: 50%;
-  margin-top: 64px;
+  max-width: 65%;
+  margin-top: 32px;
 
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
