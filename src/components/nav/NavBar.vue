@@ -19,6 +19,9 @@
             <NavLink text="MEET LOUTUS" href="/meet-loutus" />
             <NavLink text="WORK" href="/work" />
           </div>
+          <div>
+            <img class="mobile-nav-logo" src="../../assets/loutus_logo_small.svg" >
+          </div>
         </div>
       </div>
     </div>
@@ -91,13 +94,11 @@ export default {
 
 .mobile-nav-grid {
   box-sizing: border-box;
-  padding: 32px;
-  padding-top: 128px;
+
+  flex: 1 1 auto;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-start;
 }
 
 .mobile-nav-grid > * {
@@ -107,6 +108,11 @@ export default {
 }
 
 .mobile-nav-panel {
+  box-sizing: border-box;
+  padding: 32px;
+  padding-top: 128px;
+  padding-bottom: 64px;
+
   position: fixed;
   right: 0;
   top: 0;
@@ -120,6 +126,9 @@ export default {
   transition: 0.5s; /* .5s animation when changing width */
 
   background-color: white;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .close-nav-button {
@@ -131,6 +140,10 @@ export default {
 .display-panel {
   transform: translateX(0);
   box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-nav-logo {
+  width: 64px;
 }
 
 .logo-small {
