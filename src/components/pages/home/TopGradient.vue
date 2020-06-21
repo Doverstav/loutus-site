@@ -4,7 +4,8 @@
       <img class="loutus-logo" :src="logoPath" />
       <p
         class="top-gradient-text"
-      >We create digital products that are totally awesome. We create digital products that are totally awesome. We create digital products that are totally awesome.</p>
+      >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
+      <a class="top-gradient-link" href="/" @click="navigateToMeet">Get to know us ></a>
     </div>
   </div>
 </template>
@@ -18,6 +19,14 @@ export default {
       // caching of the SVG-file and ensure that the animation
       // plays every time the site is reloaded
       return `${require("../../../assets/loutus_logo.svg")}?${Date.now()}`;
+    }
+  },
+  methods: {
+    navigateToMeet(event) {
+      event.preventDefault();
+      window.history.pushState(null, "", "/meet-loutus");
+      // Make sure that things update
+      dispatchEvent(new PopStateEvent("popstate"));
     }
   }
 };
@@ -64,5 +73,12 @@ export default {
 
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
+}
+
+.top-gradient-link {
+  color: #86c7c4;
+  text-transform: uppercase;
+
+  font-family: "Maven Pro", sans-serif;
 }
 </style>
