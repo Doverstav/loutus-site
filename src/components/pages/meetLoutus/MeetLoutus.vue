@@ -5,7 +5,9 @@
         <div class="profile-text-container">
           <h1 class="profile-text profile-text-first">Hi there</h1>
           <h1 class="profile-text profile-text-second">Nice to meet you</h1>
-          <p class="profile-text-description">We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
+          <p
+            class="profile-text-description"
+          >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
         </div>
       </div>
       <div class="meet-loutus-box profiles">
@@ -31,7 +33,26 @@ export default {
   name: "MeetLoutus",
   data() {
     return {
-      profiles: require("../../../assets/data/profiles")
+      profiles: [
+        {
+          profile: require("@/assets/profile_lou.png"),
+          profileText: "She's a designer.",
+          emoji: "🦖",
+          text:
+            "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct.",
+          email: "lou@loutus.com",
+          accentColor: "#97CC2B"
+        },
+        {
+          profile: require("@/assets/profile_tus.png"),
+          profileText: "He's a developer.",
+          emoji: "🤖",
+          text:
+            "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there.",
+          email: "tus@loutus.com",
+          accentColor: "#86c7c4"
+        }
+      ]
     };
   },
   components: {
@@ -127,7 +148,7 @@ export default {
   .profile-text-description {
     max-width: 100%;
   }
-  
+
   .profiles {
     margin-top: 64px;
   }
