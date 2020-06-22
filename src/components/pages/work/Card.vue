@@ -1,12 +1,12 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <img class="card-image" :src="`https://picsum.photos/500/300?random=random${random}`" />
+      <img class="card-image" :src="imagePath" />
     </div>
     <div class="card-body">
-      <h2 class="text card-header">WEBSITE</h2>
-      <p class="text card-text">Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.</p>
-      <a class="text card-link" href="google.com">MORE PLZ ></a>
+      <h2 class="text card-header">{{header}}</h2>
+      <p class="text card-text">{{text}}</p>
+      <a class="text card-link" :href="linkHref">{{linkText}}</a>
     </div>
   </div>
 </template>
@@ -17,6 +17,13 @@ export default {
     return {
       random: Math.floor(Math.random()*100)
     }
+  },
+  props: {
+    imagePath: String,
+    header: String,
+    text: String,
+    linkText: String,
+    linkHref: String
   }
 }
 </script>
