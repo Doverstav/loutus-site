@@ -1,26 +1,29 @@
 <template>
-  <div class="meet-loutus">
-    <div class="meet-loutus-container">
-      <div class="meet-loutus-box profile-texts">
-        <div class="profile-text-container">
-          <h1 class="profile-text profile-text-first">Hi there</h1>
-          <h1 class="profile-text profile-text-second">Nice to meet you</h1>
-          <p
-            class="profile-text-description"
-          >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
+  <div>
+    <div class="background-container"></div>
+    <div class="meet-loutus">
+      <div class="meet-loutus-container">
+        <div class="meet-loutus-box profile-texts">
+          <div class="profile-text-container">
+            <h1 class="profile-text profile-text-first">Hi there</h1>
+            <h1 class="profile-text profile-text-second">Nice to meet you</h1>
+            <p
+              class="profile-text-description"
+            >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
+          </div>
         </div>
-      </div>
-      <div class="meet-loutus-box profiles">
-        <Profile
-          v-for="profile in profiles"
-          :key="profile.emoji"
-          :image="profile.profile"
-          :imageText="profile.profileText"
-          :emoji="profile.emoji"
-          :text="profile.text"
-          :email="profile.email"
-          :accentColor="profile.accentColor"
-        />
+        <div class="meet-loutus-box profiles">
+          <Profile
+            v-for="profile in profiles"
+            :key="profile.emoji"
+            :image="profile.profile"
+            :imageText="profile.profileText"
+            :emoji="profile.emoji"
+            :text="profile.text"
+            :email="profile.email"
+            :accentColor="profile.accentColor"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -63,7 +66,19 @@ export default {
 
 <style scoped>
 .meet-loutus {
-  background-image: linear-gradient(160deg, white 75%, #eaeaea 75%);
+  position: relative;
+  z-index: 10;
+}
+
+.background-container {
+  z-index: 9;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(170deg, white 65%, #eaeaea 65%);
 }
 
 .meet-loutus-container {

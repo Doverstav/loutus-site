@@ -1,20 +1,23 @@
 <template>
-  <div class="work">
-    <div class="work-container">
-      <div class="work-header-container">
-        <h1 class="work-heading-large">Products</h1>
-        <h2 class="work-heading-small">We've created</h2>
-      </div>
-      <div class="product-card-grid">
-        <Card 
-          v-for="card in cards"
-          :key="card.text"
-          :imagePath="card.imagePath"
-          :header="card.header"
-          :text="card.text"
-          :linkText="card.linkText"
-          :linkHref="card.linkHref"
-        />
+  <div>
+    <div class="background-container"></div>
+    <div class="work">
+      <div class="work-container">
+        <div class="work-header-container">
+          <h1 class="work-heading-large">Products</h1>
+          <h2 class="work-heading-small">We've created</h2>
+        </div>
+        <div class="product-card-grid">
+          <Card
+            v-for="card in cards"
+            :key="card.text"
+            :imagePath="card.imagePath"
+            :header="card.header"
+            :text="card.text"
+            :linkText="card.linkText"
+            :linkHref="card.linkHref"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -28,53 +31,80 @@ export default {
   components: {
     Card
   },
-  data () {
+  data() {
     return {
       cards: [
         {
-          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(Math.random()*100)}`,
+          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
+            Math.random() * 100
+          )}`,
           header: "Website",
-          text: "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
+          text:
+            "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
           linkText: "More plz >",
           linkHref: "google.com"
         },
         {
-          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(Math.random()*100)}`,
+          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
+            Math.random() * 100
+          )}`,
           header: "Website",
-          text: "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
+          text:
+            "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
           linkText: "More plz >",
           linkHref: "google.com"
         },
         {
-          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(Math.random()*100)}`,
+          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
+            Math.random() * 100
+          )}`,
           header: "Website",
-          text: "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
+          text:
+            "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
           linkText: "More plz >",
           linkHref: "google.com"
         },
         {
-          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(Math.random()*100)}`,
+          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
+            Math.random() * 100
+          )}`,
           header: "Website",
-          text: "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
+          text:
+            "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
           linkText: "More plz >",
           linkHref: "google.com"
         },
         {
-          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(Math.random()*100)}`,
+          imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
+            Math.random() * 100
+          )}`,
           header: "Website",
-          text: "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
+          text:
+            "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
           linkText: "More plz >",
           linkHref: "google.com"
-        },
+        }
       ]
-    }
+    };
   }
 };
 </script>
 
 <style scoped>
+.background-container {
+  z-index: 9;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(172deg, white 65%, #eaeaea 65%);
+}
+
 .work {
-  background-image: linear-gradient(160deg, white 75%, #eaeaea 75%);
+  position: relative;
+  z-index: 10;
 }
 
 .work-container {
