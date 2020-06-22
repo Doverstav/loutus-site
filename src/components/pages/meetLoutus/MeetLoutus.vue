@@ -47,7 +47,7 @@ export default {
           accentColor: "#97CC2B"
         },
         {
-          profile: require("@/assets/profile_tus.png"),
+          profile: require("@/assets/profile_tus.jpg"),
           profileText: "He's a developer.",
           emoji: "🤖",
           text:
