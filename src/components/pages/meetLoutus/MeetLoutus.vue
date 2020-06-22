@@ -10,20 +10,14 @@
       </div>
       <div class="meet-loutus-box profiles">
         <Profile
-          :image="louData.profile"
-          :imageText="louData.profileText"
-          :emoji="louData.emoji"
-          :text="louData.text"
-          :email="louData.email"
-          :accentColor="louData.accentColor"
-        />
-        <Profile
-          :image="tusData.profile"
-          :imageText="tusData.profileText"
-          :emoji="tusData.emoji"
-          :text="tusData.text"
-          :email="tusData.email"
-          :accentColor="tusData.accentColor"
+          v-for="profile in profiles"
+          :key="profile.emoji"
+          :image="profile.profile"
+          :imageText="profile.profileText"
+          :emoji="profile.emoji"
+          :text="profile.text"
+          :email="profile.email"
+          :accentColor="profile.accentColor"
         />
       </div>
     </div>
@@ -37,24 +31,7 @@ export default {
   name: "MeetLoutus",
   data() {
     return {
-      louData: {
-        profile: `https://picsum.photos/300/300?random=random${Math.floor(Math.random()*100)}`,
-        profileText: "She's a designer.",
-        emoji: "🦖",
-        text:
-          "This is Louise. She is a dinosaur. But she pretends to be a designer so that people will hire her. People think that dinosaurs can’t do design. And that is true because they are extinct.",
-        email: "lou@loutus.com",
-        accentColor: "#97CC2B"
-      },
-      tusData: {
-        profile: `https://picsum.photos/300/300?random=random${Math.floor(Math.random()*100)}`,
-        profileText: "He's a developer.",
-        emoji: "🤖",
-        text:
-          "This is Pontus. He does the blip-blop like a robot, so you can understand why his emoticon is a robot. His habitat is inside the [blip-blop] box. He likes it there.",
-        email: "tus@loutus.com",
-        accentColor: "#86c7c4"
-      }
+      profiles: require("../../../assets/data/profiles")
     };
   },
   components: {
