@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <img class="card-image" :src="imagePath" />
+      <img class="card-image" :alt="imageAlt" :src="imagePath" />
     </div>
     <div class="card-body">
       <h2 class="text card-header">{{header}}</h2>
@@ -20,6 +20,7 @@ export default {
   },
   props: {
     imagePath: String,
+    imageAlt: String,
     header: String,
     text: String,
     linkText: String,

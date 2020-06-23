@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="nav-container">
-      <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
+      <img class="logo-small" @click="goHome()" alt="Small Loutus logo" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
         <NavLink text="HOME" href="/" />
@@ -9,10 +9,10 @@
         <NavLink text="WORK" href="/work" />
       </div>
       <div class="mobile-nav-container">
-        <img src="../../assets/icons/menu.svg" @click="togglePanel()">
+        <img alt="Open navigation menu" src="../../assets/icons/menu.svg" @click="togglePanel()">
         <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
           <div>
-            <img class="close-nav-button" src="../../assets/icons/x.svg" @click="togglePanel()">
+            <img alt="Close navigation menu" class="close-nav-button" src="../../assets/icons/x.svg" @click="togglePanel()">
           </div>
           <div class="mobile-nav-grid">
             <NavLink text="HOME" href="/" />
@@ -20,7 +20,7 @@
             <NavLink text="WORK" href="/work" />
           </div>
           <div>
-            <img class="mobile-nav-logo" src="../../assets/loutus_logo_small.svg" >
+            <img class="mobile-nav-logo" alt="Small Loutus logo" src="../../assets/loutus_logo_small.svg" >
           </div>
         </div>
       </div>

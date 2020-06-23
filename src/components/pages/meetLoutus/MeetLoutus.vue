@@ -17,6 +17,7 @@
             v-for="profile in profiles"
             :key="profile.emoji"
             :image="profile.profile"
+            :imageAlt="profile.imageAlt"
             :imageText="profile.profileText"
             :emoji="profile.emoji"
             :text="profile.text"
@@ -39,6 +40,7 @@ export default {
       profiles: [
         {
           profile: require("@/assets/profile_lou.png"),
+          imageAlt: "Profile picture of Louise",
           profileText: "She's a designer.",
           emoji: "🦖",
           text:
@@ -48,6 +50,7 @@ export default {
         },
         {
           profile: require("@/assets/profile_tus.jpg"),
+          imageAlt: "Profile picture of Pontus",
           profileText: "He's a developer.",
           emoji: "🤖",
           text:

@@ -12,6 +12,7 @@
             v-for="card in cards"
             :key="card.text"
             :imagePath="card.imagePath"
+            :imageAlt="card.imageAlt"
             :header="card.header"
             :text="card.text"
             :linkText="card.linkText"
@@ -38,6 +39,7 @@ export default {
           imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
             Math.random() * 100
           )}`,
+          imageAlt: "Dummy alt text",
           header: "Website",
           text:
             "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
@@ -48,6 +50,7 @@ export default {
           imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
             Math.random() * 100
           )}`,
+          imageAlt: "Dummy alt text",
           header: "Website",
           text:
             "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
@@ -58,6 +61,7 @@ export default {
           imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
             Math.random() * 100
           )}`,
+          imageAlt: "Dummy alt text",
           header: "Website",
           text:
             "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
@@ -68,6 +72,7 @@ export default {
           imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
             Math.random() * 100
           )}`,
+          imageAlt: "Dummy alt text",
           header: "Website",
           text:
             "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",
@@ -78,6 +83,7 @@ export default {
           imagePath: `https://picsum.photos/500/300?random=random${Math.floor(
             Math.random() * 100
           )}`,
+          imageAlt: "Dummy alt text",
           header: "Website",
           text:
             "Cat ipsum dolor sit amet, furrier and even more furrier hairball but please stop looking at your phone and pet me find empty spot in cupboard and sleep all day yet kitty.",

@@ -2,7 +2,7 @@
   <div class="profile-container">
     <div class="profile-inner-container">
       <div class="profile-picture-container">
-        <img class="profile-picture" :src="image" />
+        <img class="profile-picture" :alt="imageAlt" :src="image" />
         <span class="profile-emoji">{{emoji}}</span>
       </div>
       <div class="profile-text-container">
@@ -23,6 +23,7 @@
 export default {
   props: {
     image: String,
+    imageAlt: String,
     imageText: String,
     emoji: String,
     text: String,

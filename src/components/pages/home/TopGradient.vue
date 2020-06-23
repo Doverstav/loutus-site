@@ -1,7 +1,7 @@
 <template>
   <div class="top-gradient">
     <div class="top-gradient-container">
-      <img class="loutus-logo" :src="logoPath" />
+      <img alt="Loutus logo" class="loutus-logo" :src="logoPath" />
       <p
         class="top-gradient-text"
       >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
