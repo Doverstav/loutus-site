@@ -65,6 +65,7 @@ export default {
 
 .card-header {
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .card-text {
@@ -73,5 +74,6 @@ export default {
 
 .card-link {
   font-size: 12px;
+  text-transform: uppercase;
 }
 </style>
