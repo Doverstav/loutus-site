@@ -1,24 +1,15 @@
-# loutus-site
+# Loutus website
 
-## Project setup
-```
-npm install
-```
+This project is a website for the mock company Loutus. Its purpose is to be a way to test collaborating on a project and to try out some new tools and technologies. A small and light project, just for the fun of it!
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+It is written in Vue and is hosted on Netlify.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Running
+- Setup project by running `npm install`
+- Start development server by running `npm run serve`
+- You're ready to start coding!
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Deploying
+Site is automatically deployed via Netlify when changes are pushed to a branch. Branches that currently deploy are `master` and `develop`.
+ - `master` deploys at loutus.rocks
+ - `develop` deploys at develop.loutus.rocks
