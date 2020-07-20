@@ -2,11 +2,19 @@
   <div class="profile-container">
     <div class="profile-inner-container">
       <div class="profile-picture-container">
-        <img class="profile-picture" :src="image" />
-        <p class="profile-emoji">{{emoji}}</p>
+        <img class="profile-picture" :alt="imageAlt" :src="image" />
+        <span class="profile-emoji">{{emoji}}</span>
       </div>
-      <p class="profile-picture-text">{{imageText}}</p>
-      <p class="profile-bio-text">{{text}}</p>
+      <div class="profile-text-container">
+        <div class="profile-text-section">
+          <p class="profile-picture-text" :style="textAccent">{{imageText}}</p>
+          <p class="profile-bio-text">{{text}}</p>
+        </div>
+        <div class="profile-email-section">
+          <p class="profile-email-header" :style="textAccent">Contact</p>
+          <a class="profile-email-address" :href="`mailto:${email}`">{{email}}</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,53 +23,92 @@
 export default {
   props: {
     image: String,
+    imageAlt: String,
     imageText: String,
     emoji: String,
-    text: String
+    text: String,
+    email: String,
+    accentColor: String
+  },
+  computed: {
+    textAccent () {
+      return `color: ${this.accentColor};`;
+    }
   }
 };
 </script>
 
 <style scoped>
 .profile-container {
-  position: relative;
-  text-align: left;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 16px 24px rgba(0, 29, 63, 0.14);
 
-  margin-left: 32px;
-  margin-right: 32px;
+  overflow: hidden; /* Ensure that images get rounded corners */
 }
 
 .profile-inner-container {
-  position: absolute;
-  left: 0;
-  top: 35%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .profile-picture-container {
   position: relative;
 }
 
-.profile-emoji {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  font-size: 3em;
-  margin: 0;
+.profile-picture {
+  width: 100%;
 }
 
-.profile-picture {
-  width: 75%;
-  display: block;
+.profile-emoji {
+  font-size: 2em;
+
+  position: absolute;
+  right: 8px;
+  bottom: -4px;
+}
+
+.profile-text-container {
+  font-family: "Maven Pro", sans-serif;
+
+  text-align: start;
+  margin: 16px;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 .profile-picture-text {
   font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin-top: 0;
+}
+
+.profile-bio-text {
+  font-size: 1em;
+}
+
+.profile-email-header {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.profile-email-address {
+  margin-top: 4px;
+  margin-bottom: 0px;
+
+  font-size: 0.8em;
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
 }
 
-.profile-bio-text {
-  font-family: "Maven Pro", sans-serif;
+.profile-email-address:link {
+  color: #333333;
 }
 </style>

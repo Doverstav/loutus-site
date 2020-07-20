@@ -1,13 +1,28 @@
 <template>
   <div class="nav">
     <div class="nav-container">
-      <img class="logo-small" @click="goHome()" src="../../assets/loutus_logo_small.svg" />
+      <img class="logo-small" @click="goHome()" alt="Small Loutus logo" src="../../assets/loutus_logo_small.svg" />
 
       <div class="nav-grid-container">
         <NavLink text="HOME" href="/" />
         <NavLink text="MEET LOUTUS" href="/meet-loutus" />
         <NavLink text="WORK" href="/work" />
-        <NavLink text="CONTACT" href="/contact" />
+      </div>
+      <div class="mobile-nav-container">
+        <img alt="Open navigation menu" src="../../assets/icons/menu.svg" @click="togglePanel()">
+        <div class="mobile-nav-panel" :class="{'display-panel': showPanel}">
+          <div>
+            <img alt="Close navigation menu" class="close-nav-button" src="../../assets/icons/x.svg" @click="togglePanel()">
+          </div>
+          <div class="mobile-nav-grid">
+            <NavLink text="HOME" href="/" />
+            <NavLink text="MEET LOUTUS" href="/meet-loutus" />
+            <NavLink text="WORK" href="/work" />
+          </div>
+          <div>
+            <img class="mobile-nav-logo" alt="Small Loutus logo" src="../../assets/loutus_logo_small.svg" >
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -18,8 +33,19 @@ import NavLink from "./NavLink";
 
 export default {
   name: "NavBar",
+  data: function() {
+    return {
+      showPanel: false
+    };
+  },
   components: {
     NavLink
+  },
+  beforeMount () {
+    window.addEventListener("popstate", () => {
+      // Close navigation panel when navigating away
+      this.showPanel = false;
+    })
   },
   methods: {
     goHome() {
@@ -29,6 +55,9 @@ export default {
         // Make sure that things update
         dispatchEvent(new PopStateEvent("popstate"));
       }
+    },
+    togglePanel() {
+      this.showPanel = !this.showPanel;
     }
   }
 };
@@ -46,26 +75,100 @@ export default {
 }
 
 .nav-container {
+  box-sizing: border-box;
   height: 100%;
+
   max-width: 1224px;
   margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 
   display: grid;
   grid-template-columns: auto auto;
+  align-items: center;
 }
 
 .nav-grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
+}
+
+.mobile-nav-container {
+  justify-self: end;
+  display: none;
+}
+
+.mobile-nav-grid {
+  box-sizing: border-box;
+
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-grid > * {
+  font-size: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.mobile-nav-panel {
+  box-sizing: border-box;
+  padding: 32px;
+  padding-top: 128px;
+  padding-bottom: 64px;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  height: 100vh;
+  width: 90vw;
+
+  transform: translateX(100%);
+
+  overflow-x: hidden;
+  transition: 0.5s; /* .5s animation when changing width */
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.close-nav-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.display-panel {
+  transform: translateX(0);
+  box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-nav-logo {
+  width: 64px;
 }
 
 .logo-small {
   height: 50%;
-  margin-left: 32px;
-  align-self: center;
 }
 
 .logo-small:hover {
   cursor: pointer;
 }
+
+/* Decide which nav to display based on screen size */
+@media screen and (max-width: 540px) {
+  .nav-grid-container {
+    display: none;
+  }
+
+  .mobile-nav-container {
+    display: block;
+  }
+}
+
 </style>

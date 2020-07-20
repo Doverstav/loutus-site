@@ -1,7 +1,6 @@
 <script>
 import Home from './home/Home';
 import MeetLoutus from './meetLoutus/MeetLoutus';
-import Contact from './contact/Contact';
 import Work from './work/Work';
 
 export default {
@@ -11,8 +10,7 @@ export default {
     routes: {
       '/': Home,
       '/meet-loutus': MeetLoutus,
-      '/work': Work,
-      '/contact': Contact
+      '/work': Work
     }
   }},
   beforeMount () {

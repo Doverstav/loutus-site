@@ -1,10 +1,11 @@
 <template>
   <div class="top-gradient">
     <div class="top-gradient-container">
-      <img class="loutus-logo" src="../../../assets/loutus_logo.svg" />
+      <img alt="Loutus logo" class="loutus-logo" :src="logoPath" />
       <p
         class="top-gradient-text"
-      >We create digital products that are totally awesome. We create digital products that are totally awesome. We create digital products that are totally awesome.</p>
+      >We are a dream team delivering stunning UI, UX and web design, responsively and professionally implemented.</p>
+      <a class="top-gradient-link" href="/" @click="navigateToMeet">Get to know us ></a>
     </div>
   </div>
 </template>
@@ -12,17 +13,21 @@
 <script>
 export default {
   name: "TopGradient",
-  data: function() {
-    return {
-      logoPath: "../assets/loutus_logo.svg"
-    };
+  computed: {
+    logoPath() {
+      // Add current time to path to logo. This should stop
+      // caching of the SVG-file and ensure that the animation
+      // plays every time the site is reloaded
+      return `${require("../../../assets/loutus_logo.svg")}?${Date.now()}`;
+    }
   },
-  mounted: function() {
-    // Add current time to path to logo. This should stop 
-    // caching of the SVG-file and ensure that the animation
-    // plays every time the site is reloaded
-    let logo = document.querySelector(".loutus-logo");
-    logo.src = `${logo.src}?${Date.now()}`;
+  methods: {
+    navigateToMeet(event) {
+      event.preventDefault();
+      window.history.pushState(null, "", "/meet-loutus");
+      // Make sure that things update
+      dispatchEvent(new PopStateEvent("popstate"));
+    }
   }
 };
 </script>
@@ -40,30 +45,46 @@ export default {
 }
 
 .top-gradient-container {
+  box-sizing: border-box;
+
   height: 100%;
   max-width: 1224px;
+
   margin: auto;
-  position: relative;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .loutus-logo {
-  position: absolute;
-  left: 32px;
-  top: 25%;
-  float: left;
+  margin-top: 128px;
 
-  max-width: calc(100% - 32px);
+  max-width: 100%;
 }
 
 .top-gradient-text {
-  position: absolute;
-  bottom: 10%;
-  left: 2em;
-
+  margin-top: 32px;
   max-width: 350px;
   text-align: start;
 
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
+}
+
+.top-gradient-link {
+  color: #86c7c4;
+  text-transform: uppercase;
+
+  font-family: "Maven Pro", sans-serif;
+}
+
+@media screen and (max-width: 540px) {
+  .loutus-logo {
+    margin-top: 64px;
+  }
 }
 </style>
